@@ -1,5 +1,5 @@
 /*
-Maximum and minimum of an array using minimum number of comparisons
+Learning - Maximum and minimum of an array using minimum number of comparisons
 GfG_Link: https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
 */
 // Method 1/3: Linear Search
