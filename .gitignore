@@ -4,6 +4,10 @@
 /Solution.java
 /Solution.class
 
+# Intellij Files
+/.idea
+/out
+/DailyCompetitiveProgramming-.iml
 
 # ReadMe
 /README.md
