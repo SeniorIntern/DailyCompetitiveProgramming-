@@ -1,25 +1,24 @@
-import java.util.Arrays;
 
 /*
-There is a programming language with only four operations and one variable X:
-++X and X++ increments the value of the variable X by 1.
---X and X-- decrements the value of the variable X by 1.
-Initially, the value of X is 0.
-Given an array of strings operations containing a list of operations, return the final value of X after performing all the operations.
+1480_Link: https://leetcode.com/problems/running-sum-of-1d-array/
+Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+Return the running sum of nums.
 */
-public class Running_Sum_1d_Array {
-    public int finalValueAfterOperations(String[] operations) {
-        int k = 0;
-        for(int i=0; i<=operations.length;i++){
-            System.out.println(operations[i]);
-        }
+import java.util.Arrays;
 
-        return k;
+public class Running_Sum_1d_Array {
+    public int[] runningSum(int[] nums) {
+        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = nums[i] + sum;
+            sum = nums[i];
+        }
+        return nums;
     }
 
-    //    Driver Code
+    // Driver Code
     public static void main(String[] args) {
         Running_Sum_1d_Array oj = new Running_Sum_1d_Array();
-        System.out.println("output: " + oj.finalValueAfterOperations(new String[]{"--X", "X++", "X++"}));
+        System.out.println("output: " + Arrays.toString(oj.runningSum(new int[] { 1, 2, 3, 4 })));
     }
 }
